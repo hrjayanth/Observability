@@ -1,0 +1,46 @@
+
+services:
+  tempo:
+    image: grafana/tempo:r218-6a1bd93
+    container_name: tempo-101
+    command: ["-config.file=/etc/tempo.yaml"]
+    volumes:
+      - ./resources/tempo.yaml:/etc/tempo.yaml
+    networks:
+      - telemetry
+    ports:
+      - "3200:3200"   # UI / HTTP query API only
+    restart: always
+
+  otel-collector:
+    image: otel/opentelemetry-collector-contrib:0.136.0
+    container_name: otel-collector-101
+    command: ["--config=/etc/otelcol/config.yaml"]
+    volumes:
+      - ./resources/collector-config.yaml:/etc/otelcol/config.yaml
+    ports:
+      - "4317:4317"  # gRPC for your app
+      - "4318:4318"  # HTTP for your app
+    depends_on:
+      - tempo
+    networks:
+      - telemetry
+    restart: always
+
+  grafana:
+    image: grafana/grafana:12.2
+    container_name: grafana-101
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+    depends_on:
+      - tempo
+    networks:
+      - telemetry
+    restart: always
+
+networks:
+  telemetry:
+    driver: bridge
