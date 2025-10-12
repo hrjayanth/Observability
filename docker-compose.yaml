@@ -2,7 +2,7 @@
 services:
   tempo:
     image: grafana/tempo:r218-6a1bd93
-    container_name: tempo-101
+    container_name: tempo-201
     command: ["-config.file=/etc/tempo.yaml"]
     volumes:
       - ./resources/tempo.yaml:/etc/tempo.yaml
@@ -14,7 +14,7 @@ services:
 
   otel-collector:
     image: otel/opentelemetry-collector-contrib:0.136.0
-    container_name: otel-collector-101
+    container_name: otel-collector-201
     command: ["--config=/etc/otelcol/config.yaml"]
     volumes:
       - ./resources/collector-config.yaml:/etc/otelcol/config.yaml
@@ -29,7 +29,7 @@ services:
 
   grafana:
     image: grafana/grafana:12.2
-    container_name: grafana-101
+    container_name: grafana-201
     ports:
       - "3000:3000"
     environment:
