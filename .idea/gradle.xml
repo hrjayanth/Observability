@@ -11,6 +11,8 @@
             <option value="$PROJECT_DIR$/Consumer" />
             <option value="$PROJECT_DIR$/Producer" />
             <option value="$PROJECT_DIR$/java-simple" />
+            <option value="$PROJECT_DIR$/message-processor" />
+            <option value="$PROJECT_DIR$/message-processor-2" />
           </set>
         </option>
       </GradleProjectSettings>
