@@ -1,0 +1,649 @@
+ScopeSpans #0
+2025-10-04 12:50:05 ScopeSpans SchemaURL:
+2025-10-04 12:50:05 InstrumentationScope io.opentelemetry.opentelemetry-instrumentation-annotations-1.16 2.20.0-alpha
+2025-10-04 12:50:05 Span #0
+2025-10-04 12:50:05     Trace ID       : 2f3dd123206516d93a6b20e2d3106b7a
+2025-10-04 12:50:05     Parent ID      : b5a95b5ba7a699b9
+2025-10-04 12:50:05     ID             : 37019ef216bbd709
+2025-10-04 12:50:05     Name           : ProducerService.sendMessage
+2025-10-04 12:50:05     Kind           : Producer
+2025-10-04 12:50:05     Start time     : 2025-10-04 07:19:57.710489792 +0000 UTC
+2025-10-04 12:50:05     End time       : 2025-10-04 07:19:57.710774125 +0000 UTC
+2025-10-04 12:50:05     Status code    : Unset
+2025-10-04 12:50:05     Status message :
+2025-10-04 12:50:05 Attributes:
+2025-10-04 12:50:05      -> thread.id: Int(52)
+2025-10-04 12:50:05      -> code.namespace: Str(com.learn.jay.service.ProducerService)
+2025-10-04 12:50:05      -> code.function: Str(sendMessage)
+2025-10-04 12:50:05      -> thread.name: Str(org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1)
+2025-10-04 12:50:05 Span #1
+2025-10-04 12:50:05     Trace ID       : 2f3dd123206516d93a6b20e2d3106b7a
+2025-10-04 12:50:05     Parent ID      : 9d2187583bef491e
+2025-10-04 12:50:05     ID             : b5a95b5ba7a699b9
+2025-10-04 12:50:05     Name           : ConsumerService.consume
+2025-10-04 12:50:05     Kind           : Consumer
+2025-10-04 12:50:05     Start time     : 2025-10-04 07:19:57.709232375 +0000 UTC
+2025-10-04 12:50:05     End time       : 2025-10-04 07:19:57.710792209 +0000 UTC
+2025-10-04 12:50:05     Status code    : Unset
+2025-10-04 12:50:05     Status message :
+2025-10-04 12:50:05 Attributes:
+2025-10-04 12:50:05      -> thread.id: Int(52)
+2025-10-04 12:50:05      -> code.namespace: Str(com.learn.jay.service.ConsumerService)
+2025-10-04 12:50:05      -> code.function: Str(consume)
+2025-10-04 12:50:05      -> Message-ID: Str(1001)
+2025-10-04 12:50:05      -> thread.name: Str(org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1)
+2025-10-04 12:50:05 Span #2
+2025-10-04 12:50:05     Trace ID       : d9ff1048b09f2c191f0fda44c530c4c4
+2025-10-04 12:50:05     Parent ID      : 47d84e20dedd821b
+2025-10-04 12:50:05     ID             : 2835563f920803e6
+2025-10-04 12:50:05     Name           : ProducerService.sendMessage
+2025-10-04 12:50:05     Kind           : Producer
+2025-10-04 12:50:05     Start time     : 2025-10-04 07:19:57.728084 +0000 UTC
+2025-10-04 12:50:05     End time       : 2025-10-04 07:19:57.728249583 +0000 UTC
+2025-10-04 12:50:05     Status code    : Unset
+2025-10-04 12:50:05     Status message :
+2025-10-04 12:50:05 Attributes:
+2025-10-04 12:50:05      -> thread.id: Int(52)
+2025-10-04 12:50:05      -> code.namespace: Str(com.learn.jay.service.ProducerService)
+2025-10-04 12:50:05      -> code.function: Str(sendMessage)
+2025-10-04 12:50:05      -> thread.name: Str(org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1)
+2025-10-04 12:50:05 Span #3
+2025-10-04 12:50:05     Trace ID       : d9ff1048b09f2c191f0fda44c530c4c4
+2025-10-04 12:50:05     Parent ID      : 94e94bcecd5672c7
+2025-10-04 12:50:05     ID             : 47d84e20dedd821b
+2025-10-04 12:50:05     Name           : ConsumerService.consume
+2025-10-04 12:50:05     Kind           : Consumer
+2025-10-04 12:50:05     Start time     : 2025-10-04 07:19:57.726916417 +0000 UTC
+2025-10-04 12:50:05     End time       : 2025-10-04 07:19:57.728258333 +0000 UTC
+2025-10-04 12:50:05     Status code    : Unset
+2025-10-04 12:50:05     Status message :
+2025-10-04 12:50:05 Attributes:
+2025-10-04 12:50:05      -> thread.id: Int(52)
+2025-10-04 12:50:05      -> code.namespace: Str(com.learn.jay.service.ConsumerService)
+2025-10-04 12:50:05      -> code.function: Str(consume)
+2025-10-04 12:50:05      -> Message-ID: Str(1002)
+2025-10-04 12:50:05      -> thread.name: Str(org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1)
+2025-10-04 12:50:05 Span #4
+2025-10-04 12:50:05     Trace ID       : 59371255f1019988ebb83383eaac3125
+2025-10-04 12:50:05     Parent ID      : 7f63fe571447c9c2
+2025-10-04 12:50:05     ID             : b6d5df2b3ca44e96
+2025-10-04 12:50:05     Name           : ProducerService.sendMessage
+2025-10-04 12:50:05     Kind           : Producer
+2025-10-04 12:50:05     Start time     : 2025-10-04 07:19:57.739512042 +0000 UTC
+2025-10-04 12:50:05     End time       : 2025-10-04 07:19:57.73967275 +0000 UTC
+2025-10-04 12:50:05     Status code    : Unset
+2025-10-04 12:50:05     Status message :
+2025-10-04 12:50:05 Attributes:
+2025-10-04 12:50:05      -> thread.id: Int(52)
+2025-10-04 12:50:05      -> code.namespace: Str(com.learn.jay.service.ProducerService)
+2025-10-04 12:50:05      -> code.function: Str(sendMessage)
+2025-10-04 12:50:05      -> thread.name: Str(org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1)
+2025-10-04 12:50:05 Span #5
+2025-10-04 12:50:05     Trace ID       : 59371255f1019988ebb83383eaac3125
+2025-10-04 12:50:05     Parent ID      : 65800ae55659254a
+2025-10-04 12:50:05     ID             : 7f63fe571447c9c2
+2025-10-04 12:50:05     Name           : ConsumerService.consume
+2025-10-04 12:50:05     Kind           : Consumer
+2025-10-04 12:50:05     Start time     : 2025-10-04 07:19:57.738744959 +0000 UTC
+2025-10-04 12:50:05     End time       : 2025-10-04 07:19:57.739681917 +0000 UTC
+2025-10-04 12:50:05     Status code    : Unset
+2025-10-04 12:50:05     Status message :
+2025-10-04 12:50:05 Attributes:
+2025-10-04 12:50:05      -> thread.id: Int(52)
+2025-10-04 12:50:05      -> code.namespace: Str(com.learn.jay.service.ConsumerService)
+2025-10-04 12:50:05      -> code.function: Str(consume)
+2025-10-04 12:50:05      -> Message-ID: Str(1003)
+2025-10-04 12:50:05      -> thread.name: Str(org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1)
+2025-10-04 12:50:05 Span #6
+2025-10-04 12:50:05     Trace ID       : 3445c87b55ab0f2d458fd11e6779f4d2
+2025-10-04 12:50:05     Parent ID      : 15a2045ca69f0be2
+2025-10-04 12:50:05     ID             : d7dd38f986bc7c11
+2025-10-04 12:50:05     Name           : ProducerService.sendMessage
+2025-10-04 12:50:05     Kind           : Producer
+2025-10-04 12:50:05     Start time     : 2025-10-04 07:19:57.761748209 +0000 UTC
+2025-10-04 12:50:05     End time       : 2025-10-04 07:19:57.761977625 +0000 UTC
+2025-10-04 12:50:05     Status code    : Unset
+2025-10-04 12:50:05     Status message :
+2025-10-04 12:50:05 Attributes:
+2025-10-04 12:50:05      -> thread.id: Int(52)
+2025-10-04 12:50:05      -> code.namespace: Str(com.learn.jay.service.ProducerService)
+2025-10-04 12:50:05      -> code.function: Str(sendMessage)
+2025-10-04 12:50:05      -> thread.name: Str(org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1)
+2025-10-04 12:50:05 Span #7
+2025-10-04 12:50:05     Trace ID       : 3445c87b55ab0f2d458fd11e6779f4d2
+2025-10-04 12:50:05     Parent ID      : c819ce85dc5fc830
+2025-10-04 12:50:05     ID             : 15a2045ca69f0be2
+2025-10-04 12:50:05     Name           : ConsumerService.consume
+2025-10-04 12:50:05     Kind           : Consumer
+2025-10-04 12:50:05     Start time     : 2025-10-04 07:19:57.749550084 +0000 UTC
+2025-10-04 12:50:05     End time       : 2025-10-04 07:19:57.761988709 +0000 UTC
+2025-10-04 12:50:05     Status code    : Unset
+2025-10-04 12:50:05     Status message :
+2025-10-04 12:50:05 Attributes:
+2025-10-04 12:50:05      -> thread.id: Int(52)
+2025-10-04 12:50:05      -> code.namespace: Str(com.learn.jay.service.ConsumerService)
+2025-10-04 12:50:05      -> code.function: Str(consume)
+2025-10-04 12:50:05      -> Message-ID: Str(1004)
+2025-10-04 12:50:05      -> thread.name: Str(org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1)
+2025-10-04 12:50:05 Span #8
+2025-10-04 12:50:05     Trace ID       : a2c3d908cb7b88b01466417f6137daba
+2025-10-04 12:50:05     Parent ID      : 33e2f537c84433a5
+2025-10-04 12:50:05     ID             : 8e0227b53a369007
+2025-10-04 12:50:05     Name           : ProducerService.sendMessage
+2025-10-04 12:50:05     Kind           : Producer
+2025-10-04 12:50:05     Start time     : 2025-10-04 07:19:57.77100925 +0000 UTC
+2025-10-04 12:50:05     End time       : 2025-10-04 07:19:57.771179 +0000 UTC
+2025-10-04 12:50:05     Status code    : Unset
+2025-10-04 12:50:05     Status message :
+2025-10-04 12:50:05 Attributes:
+2025-10-04 12:50:05      -> thread.id: Int(52)
+2025-10-04 12:50:05      -> code.namespace: Str(com.learn.jay.service.ProducerService)
+2025-10-04 12:50:05      -> code.function: Str(sendMessage)
+2025-10-04 12:50:05      -> thread.name: Str(org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1)
+2025-10-04 12:50:05 Span #9
+2025-10-04 12:50:05     Trace ID       : a2c3d908cb7b88b01466417f6137daba
+2025-10-04 12:50:05     Parent ID      : 7261afdc5cad1acf
+2025-10-04 12:50:05     ID             : 33e2f537c84433a5
+2025-10-04 12:50:05     Name           : ConsumerService.consume
+2025-10-04 12:50:05     Kind           : Consumer
+2025-10-04 12:50:05     Start time     : 2025-10-04 07:19:57.770239583 +0000 UTC
+2025-10-04 12:50:05     End time       : 2025-10-04 07:19:57.771188667 +0000 UTC
+2025-10-04 12:50:05     Status code    : Unset
+2025-10-04 12:50:05     Status message :
+2025-10-04 12:50:05 Attributes:
+2025-10-04 12:50:05      -> thread.id: Int(52)
+2025-10-04 12:50:05      -> code.namespace: Str(com.learn.jay.service.ConsumerService)
+2025-10-04 12:50:05      -> code.function: Str(consume)
+2025-10-04 12:50:05      -> Message-ID: Str(1005)
+2025-10-04 12:50:05      -> thread.name: Str(org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1)
+2025-10-04 12:50:05 Span #10
+2025-10-04 12:50:05     Trace ID       : 1f9ce9cac57afd519a680d75bc0dd4ae
+2025-10-04 12:50:05     Parent ID      : 7d0b462d015dc36c
+2025-10-04 12:50:05     ID             : a5e8a4e89936e487
+2025-10-04 12:50:05     Name           : ProducerService.sendMessage
+2025-10-04 12:50:05     Kind           : Producer
+2025-10-04 12:50:05     Start time     : 2025-10-04 07:19:57.780514083 +0000 UTC
+2025-10-04 12:50:05     End time       : 2025-10-04 07:19:57.780674333 +0000 UTC
+2025-10-04 12:50:05     Status code    : Unset
+2025-10-04 12:50:05     Status message :
+2025-10-04 12:50:05 Attributes:
+2025-10-04 12:50:05      -> thread.id: Int(52)
+2025-10-04 12:50:05      -> code.namespace: Str(com.learn.jay.service.ProducerService)
+2025-10-04 12:50:05      -> code.function: Str(sendMessage)
+2025-10-04 12:50:05      -> thread.name: Str(org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1)
+2025-10-04 12:50:05 Span #11
+2025-10-04 12:50:05     Trace ID       : 1f9ce9cac57afd519a680d75bc0dd4ae
+2025-10-04 12:50:05     Parent ID      : 20925cbf76d09ad8
+2025-10-04 12:50:05     ID             : 7d0b462d015dc36c
+2025-10-04 12:50:05     Name           : ConsumerService.consume
+2025-10-04 12:50:05     Kind           : Consumer
+2025-10-04 12:50:05     Start time     : 2025-10-04 07:19:57.779715166 +0000 UTC
+2025-10-04 12:50:05     End time       : 2025-10-04 07:19:57.780683291 +0000 UTC
+2025-10-04 12:50:05     Status code    : Unset
+2025-10-04 12:50:05     Status message :
+2025-10-04 12:50:05 Attributes:
+2025-10-04 12:50:05      -> thread.id: Int(52)
+2025-10-04 12:50:05      -> code.namespace: Str(com.learn.jay.service.ConsumerService)
+2025-10-04 12:50:05      -> code.function: Str(consume)
+2025-10-04 12:50:05      -> Message-ID: Str(1006)
+2025-10-04 12:50:05      -> thread.name: Str(org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1)
+2025-10-04 12:50:05 Span #12
+2025-10-04 12:50:05     Trace ID       : 75b989f4476205d30e1e6fbad1480b89
+2025-10-04 12:50:05     Parent ID      : fcab0eb061a384c3
+2025-10-04 12:50:05     ID             : fd7e1c78e470ed23
+2025-10-04 12:50:05     Name           : ProducerService.sendMessage
+2025-10-04 12:50:05     Kind           : Producer
+2025-10-04 12:50:05     Start time     : 2025-10-04 07:19:57.788722042 +0000 UTC
+2025-10-04 12:50:05     End time       : 2025-10-04 07:19:57.789506542 +0000 UTC
+2025-10-04 12:50:05     Status code    : Unset
+2025-10-04 12:50:05     Status message :
+2025-10-04 12:50:05 Attributes:
+2025-10-04 12:50:05      -> thread.id: Int(52)
+2025-10-04 12:50:05      -> code.namespace: Str(com.learn.jay.service.ProducerService)
+2025-10-04 12:50:05      -> code.function: Str(sendMessage)
+2025-10-04 12:50:05      -> thread.name: Str(org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1)
+2025-10-04 12:50:05 Span #13
+2025-10-04 12:50:05     Trace ID       : 75b989f4476205d30e1e6fbad1480b89
+2025-10-04 12:50:05     Parent ID      : b6d01ba29e22ea58
+2025-10-04 12:50:05     ID             : fcab0eb061a384c3
+2025-10-04 12:50:05     Name           : ConsumerService.consume
+2025-10-04 12:50:05     Kind           : Consumer
+2025-10-04 12:50:05     Start time     : 2025-10-04 07:19:57.78799575 +0000 UTC
+2025-10-04 12:50:05     End time       : 2025-10-04 07:19:57.789566417 +0000 UTC
+2025-10-04 12:50:05     Status code    : Unset
+2025-10-04 12:50:05     Status message :
+2025-10-04 12:50:05 Attributes:
+2025-10-04 12:50:05      -> thread.id: Int(52)
+2025-10-04 12:50:05      -> code.namespace: Str(com.learn.jay.service.ConsumerService)
+2025-10-04 12:50:05      -> code.function: Str(consume)
+2025-10-04 12:50:05      -> Message-ID: Str(1007)
+2025-10-04 12:50:05      -> thread.name: Str(org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1)
+2025-10-04 12:50:05 Span #14
+2025-10-04 12:50:05     Trace ID       : d8cd5b98c14b484fae8b3794f594d4b8
+2025-10-04 12:50:05     Parent ID      : ab8f16797006bed4
+2025-10-04 12:50:05     ID             : 6d91e543bbf80552
+2025-10-04 12:50:05     Name           : ProducerService.sendMessage
+2025-10-04 12:50:05     Kind           : Producer
+2025-10-04 12:50:05     Start time     : 2025-10-04 07:19:57.79813975 +0000 UTC
+2025-10-04 12:50:05     End time       : 2025-10-04 07:19:57.79828675 +0000 UTC
+2025-10-04 12:50:05     Status code    : Unset
+2025-10-04 12:50:05     Status message :
+2025-10-04 12:50:05 Attributes:
+2025-10-04 12:50:05      -> thread.id: Int(52)
+2025-10-04 12:50:05      -> code.namespace: Str(com.learn.jay.service.ProducerService)
+2025-10-04 12:50:05      -> code.function: Str(sendMessage)
+2025-10-04 12:50:05      -> thread.name: Str(org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1)
+2025-10-04 12:50:05 Span #15
+2025-10-04 12:50:05     Trace ID       : d8cd5b98c14b484fae8b3794f594d4b8
+2025-10-04 12:50:05     Parent ID      : 490aa3505aea215c
+2025-10-04 12:50:05     ID             : ab8f16797006bed4
+2025-10-04 12:50:05     Name           : ConsumerService.consume
+2025-10-04 12:50:05     Kind           : Consumer
+2025-10-04 12:50:05     Start time     : 2025-10-04 07:19:57.797431166 +0000 UTC
+2025-10-04 12:50:05     End time       : 2025-10-04 07:19:57.798295291 +0000 UTC
+2025-10-04 12:50:05     Status code    : Unset
+2025-10-04 12:50:05     Status message :
+2025-10-04 12:50:05 Attributes:
+2025-10-04 12:50:05      -> thread.id: Int(52)
+2025-10-04 12:50:05      -> code.namespace: Str(com.learn.jay.service.ConsumerService)
+2025-10-04 12:50:05      -> code.function: Str(consume)
+2025-10-04 12:50:05      -> Message-ID: Str(1008)
+2025-10-04 12:50:05      -> thread.name: Str(org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1)
+2025-10-04 12:50:05 Span #16
+2025-10-04 12:50:05     Trace ID       : 8455f6228e160d8838ab89ef6d3631ba
+2025-10-04 12:50:05     Parent ID      : 94651d3334b49cb0
+2025-10-04 12:50:05     ID             : eea16883093a8137
+2025-10-04 12:50:05     Name           : ProducerService.sendMessage
+2025-10-04 12:50:05     Kind           : Producer
+2025-10-04 12:50:05     Start time     : 2025-10-04 07:19:57.806674417 +0000 UTC
+2025-10-04 12:50:05     End time       : 2025-10-04 07:19:57.806806833 +0000 UTC
+2025-10-04 12:50:05     Status code    : Unset
+2025-10-04 12:50:05     Status message :
+2025-10-04 12:50:05 Attributes:
+2025-10-04 12:50:05      -> thread.id: Int(52)
+2025-10-04 12:50:05      -> code.namespace: Str(com.learn.jay.service.ProducerService)
+2025-10-04 12:50:05      -> code.function: Str(sendMessage)
+2025-10-04 12:50:05      -> thread.name: Str(org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1)
+2025-10-04 12:50:05 Span #17
+2025-10-04 12:50:05     Trace ID       : 8455f6228e160d8838ab89ef6d3631ba
+2025-10-04 12:50:05     Parent ID      : 2b03f9ed82a56f73
+2025-10-04 12:50:05     ID             : 94651d3334b49cb0
+2025-10-04 12:50:05     Name           : ConsumerService.consume
+2025-10-04 12:50:05     Kind           : Consumer
+2025-10-04 12:50:05     Start time     : 2025-10-04 07:19:57.805961833 +0000 UTC
+2025-10-04 12:50:05     End time       : 2025-10-04 07:19:57.806815125 +0000 UTC
+2025-10-04 12:50:05     Status code    : Unset
+2025-10-04 12:50:05     Status message :
+2025-10-04 12:50:05 Attributes:
+2025-10-04 12:50:05      -> thread.id: Int(52)
+2025-10-04 12:50:05      -> code.namespace: Str(com.learn.jay.service.ConsumerService)
+2025-10-04 12:50:05      -> code.function: Str(consume)
+2025-10-04 12:50:05      -> Message-ID: Str(1009)
+2025-10-04 12:50:05      -> thread.name: Str(org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1)
+2025-10-04 12:50:05 ScopeSpans #1
+2025-10-04 12:50:05 ScopeSpans SchemaURL:
+2025-10-04 12:50:05 InstrumentationScope io.opentelemetry.spring-kafka-2.7 2.20.0-alpha
+2025-10-04 12:50:05 Span #0
+2025-10-04 12:50:05     Trace ID       : 2f3dd123206516d93a6b20e2d3106b7a
+2025-10-04 12:50:05     Parent ID      :
+2025-10-04 12:50:05     ID             : 9d2187583bef491e
+2025-10-04 12:50:05     Name           : input-messages process
+2025-10-04 12:50:05     Kind           : Consumer
+2025-10-04 12:50:05     Start time     : 2025-10-04 07:19:57.709132 +0000 UTC
+2025-10-04 12:50:05     End time       : 2025-10-04 07:19:57.7108045 +0000 UTC
+2025-10-04 12:50:05     Status code    : Unset
+2025-10-04 12:50:05     Status message :
+2025-10-04 12:50:05 Attributes:
+2025-10-04 12:50:05      -> messaging.destination.partition.id: Str(0)
+2025-10-04 12:50:05      -> messaging.system: Str(kafka)
+2025-10-04 12:50:05      -> thread.id: Int(52)
+2025-10-04 12:50:05      -> messaging.kafka.consumer.group: Str(message-processor-group)
+2025-10-04 12:50:05      -> messaging.message.body.size: Int(152)
+2025-10-04 12:50:05      -> messaging.kafka.message.offset: Int(12)
+2025-10-04 12:50:05      -> messaging.client_id: Str(consumer-message-processor-group-1)
+2025-10-04 12:50:05      -> thread.name: Str(org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1)
+2025-10-04 12:50:05      -> messaging.destination.name: Str(input-messages)
+2025-10-04 12:50:05      -> messaging.operation: Str(process)
+2025-10-04 12:50:05 Span #1
+2025-10-04 12:50:05     Trace ID       : d9ff1048b09f2c191f0fda44c530c4c4
+2025-10-04 12:50:05     Parent ID      :
+2025-10-04 12:50:05     ID             : 94e94bcecd5672c7
+2025-10-04 12:50:05     Name           : input-messages process
+2025-10-04 12:50:05     Kind           : Consumer
+2025-10-04 12:50:05     Start time     : 2025-10-04 07:19:57.726856 +0000 UTC
+2025-10-04 12:50:05     End time       : 2025-10-04 07:19:57.728269625 +0000 UTC
+2025-10-04 12:50:05     Status code    : Unset
+2025-10-04 12:50:05     Status message :
+2025-10-04 12:50:05 Attributes:
+2025-10-04 12:50:05      -> messaging.destination.partition.id: Str(0)
+2025-10-04 12:50:05      -> messaging.system: Str(kafka)
+2025-10-04 12:50:05      -> thread.id: Int(52)
+2025-10-04 12:50:05      -> messaging.kafka.consumer.group: Str(message-processor-group)
+2025-10-04 12:50:05      -> messaging.message.body.size: Int(152)
+2025-10-04 12:50:05      -> messaging.kafka.message.offset: Int(13)
+2025-10-04 12:50:05      -> messaging.client_id: Str(consumer-message-processor-group-1)
+2025-10-04 12:50:05      -> thread.name: Str(org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1)
+2025-10-04 12:50:05      -> messaging.destination.name: Str(input-messages)
+2025-10-04 12:50:05      -> messaging.operation: Str(process)
+2025-10-04 12:50:05 Span #2
+2025-10-04 12:50:05     Trace ID       : 59371255f1019988ebb83383eaac3125
+2025-10-04 12:50:05     Parent ID      :
+2025-10-04 12:50:05     ID             : 65800ae55659254a
+2025-10-04 12:50:05     Name           : input-messages process
+2025-10-04 12:50:05     Kind           : Consumer
+2025-10-04 12:50:05     Start time     : 2025-10-04 07:19:57.738686 +0000 UTC
+2025-10-04 12:50:05     End time       : 2025-10-04 07:19:57.739692125 +0000 UTC
+2025-10-04 12:50:05     Status code    : Unset
+2025-10-04 12:50:05     Status message :
+2025-10-04 12:50:05 Attributes:
+2025-10-04 12:50:05      -> messaging.destination.partition.id: Str(0)
+2025-10-04 12:50:05      -> messaging.system: Str(kafka)
+2025-10-04 12:50:05      -> thread.id: Int(52)
+2025-10-04 12:50:05      -> messaging.kafka.consumer.group: Str(message-processor-group)
+2025-10-04 12:50:05      -> messaging.message.body.size: Int(152)
+2025-10-04 12:50:05      -> messaging.kafka.message.offset: Int(14)
+2025-10-04 12:50:05      -> messaging.client_id: Str(consumer-message-processor-group-1)
+2025-10-04 12:50:05      -> thread.name: Str(org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1)
+2025-10-04 12:50:05      -> messaging.destination.name: Str(input-messages)
+2025-10-04 12:50:05      -> messaging.operation: Str(process)
+2025-10-04 12:50:05 Span #3
+2025-10-04 12:50:05     Trace ID       : 3445c87b55ab0f2d458fd11e6779f4d2
+2025-10-04 12:50:05     Parent ID      :
+2025-10-04 12:50:05     ID             : c819ce85dc5fc830
+2025-10-04 12:50:05     Name           : input-messages process
+2025-10-04 12:50:05     Kind           : Consumer
+2025-10-04 12:50:05     Start time     : 2025-10-04 07:19:57.749488 +0000 UTC
+2025-10-04 12:50:05     End time       : 2025-10-04 07:19:57.762002917 +0000 UTC
+2025-10-04 12:50:05     Status code    : Unset
+2025-10-04 12:50:05     Status message :
+2025-10-04 12:50:05 Attributes:
+2025-10-04 12:50:05      -> messaging.destination.partition.id: Str(0)
+2025-10-04 12:50:05      -> messaging.system: Str(kafka)
+2025-10-04 12:50:05      -> thread.id: Int(52)
+2025-10-04 12:50:05      -> messaging.kafka.consumer.group: Str(message-processor-group)
+2025-10-04 12:50:05      -> messaging.message.body.size: Int(152)
+2025-10-04 12:50:05      -> messaging.kafka.message.offset: Int(15)
+2025-10-04 12:50:05      -> messaging.client_id: Str(consumer-message-processor-group-1)
+2025-10-04 12:50:05      -> thread.name: Str(org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1)
+2025-10-04 12:50:05      -> messaging.destination.name: Str(input-messages)
+2025-10-04 12:50:05      -> messaging.operation: Str(process)
+2025-10-04 12:50:05 Span #4
+2025-10-04 12:50:05     Trace ID       : a2c3d908cb7b88b01466417f6137daba
+2025-10-04 12:50:05     Parent ID      :
+2025-10-04 12:50:05     ID             : 7261afdc5cad1acf
+2025-10-04 12:50:05     Name           : input-messages process
+2025-10-04 12:50:05     Kind           : Consumer
+2025-10-04 12:50:05     Start time     : 2025-10-04 07:19:57.770182 +0000 UTC
+2025-10-04 12:50:05     End time       : 2025-10-04 07:19:57.771198833 +0000 UTC
+2025-10-04 12:50:05     Status code    : Unset
+2025-10-04 12:50:05     Status message :
+2025-10-04 12:50:05 Attributes:
+2025-10-04 12:50:05      -> messaging.destination.partition.id: Str(0)
+2025-10-04 12:50:05      -> messaging.system: Str(kafka)
+2025-10-04 12:50:05      -> thread.id: Int(52)
+2025-10-04 12:50:05      -> messaging.kafka.consumer.group: Str(message-processor-group)
+2025-10-04 12:50:05      -> messaging.message.body.size: Int(152)
+2025-10-04 12:50:05      -> messaging.kafka.message.offset: Int(16)
+2025-10-04 12:50:05      -> messaging.client_id: Str(consumer-message-processor-group-1)
+2025-10-04 12:50:05      -> thread.name: Str(org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1)
+2025-10-04 12:50:05      -> messaging.destination.name: Str(input-messages)
+2025-10-04 12:50:05      -> messaging.operation: Str(process)
+2025-10-04 12:50:05 Span #5
+2025-10-04 12:50:05     Trace ID       : 1f9ce9cac57afd519a680d75bc0dd4ae
+2025-10-04 12:50:05     Parent ID      :
+2025-10-04 12:50:05     ID             : 20925cbf76d09ad8
+2025-10-04 12:50:05     Name           : input-messages process
+2025-10-04 12:50:05     Kind           : Consumer
+2025-10-04 12:50:05     Start time     : 2025-10-04 07:19:57.779654 +0000 UTC
+2025-10-04 12:50:05     End time       : 2025-10-04 07:19:57.780694333 +0000 UTC
+2025-10-04 12:50:05     Status code    : Unset
+2025-10-04 12:50:05     Status message :
+2025-10-04 12:50:05 Attributes:
+2025-10-04 12:50:05      -> messaging.destination.partition.id: Str(0)
+2025-10-04 12:50:05      -> messaging.system: Str(kafka)
+2025-10-04 12:50:05      -> thread.id: Int(52)
+2025-10-04 12:50:05      -> messaging.kafka.consumer.group: Str(message-processor-group)
+2025-10-04 12:50:05      -> messaging.message.body.size: Int(152)
+2025-10-04 12:50:05      -> messaging.kafka.message.offset: Int(17)
+2025-10-04 12:50:05      -> messaging.client_id: Str(consumer-message-processor-group-1)
+2025-10-04 12:50:05      -> thread.name: Str(org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1)
+2025-10-04 12:50:05      -> messaging.destination.name: Str(input-messages)
+2025-10-04 12:50:05      -> messaging.operation: Str(process)
+2025-10-04 12:50:05 Span #6
+2025-10-04 12:50:05     Trace ID       : 75b989f4476205d30e1e6fbad1480b89
+2025-10-04 12:50:05     Parent ID      :
+2025-10-04 12:50:05     ID             : b6d01ba29e22ea58
+2025-10-04 12:50:05     Name           : input-messages process
+2025-10-04 12:50:05     Kind           : Consumer
+2025-10-04 12:50:05     Start time     : 2025-10-04 07:19:57.787939 +0000 UTC
+2025-10-04 12:50:05     End time       : 2025-10-04 07:19:57.789585542 +0000 UTC
+2025-10-04 12:50:05     Status code    : Unset
+2025-10-04 12:50:05     Status message :
+2025-10-04 12:50:05 Attributes:
+2025-10-04 12:50:05      -> messaging.destination.partition.id: Str(0)
+2025-10-04 12:50:05      -> messaging.system: Str(kafka)
+2025-10-04 12:50:05      -> thread.id: Int(52)
+2025-10-04 12:50:05      -> messaging.kafka.consumer.group: Str(message-processor-group)
+2025-10-04 12:50:05      -> messaging.message.body.size: Int(152)
+2025-10-04 12:50:05      -> messaging.kafka.message.offset: Int(18)
+2025-10-04 12:50:05      -> messaging.client_id: Str(consumer-message-processor-group-1)
+2025-10-04 12:50:05      -> thread.name: Str(org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1)
+2025-10-04 12:50:05      -> messaging.destination.name: Str(input-messages)
+2025-10-04 12:50:05      -> messaging.operation: Str(process)
+2025-10-04 12:50:05 Span #7
+2025-10-04 12:50:05     Trace ID       : d8cd5b98c14b484fae8b3794f594d4b8
+2025-10-04 12:50:05     Parent ID      :
+2025-10-04 12:50:05     ID             : 490aa3505aea215c
+2025-10-04 12:50:05     Name           : input-messages process
+2025-10-04 12:50:05     Kind           : Consumer
+2025-10-04 12:50:05     Start time     : 2025-10-04 07:19:57.797377 +0000 UTC
+2025-10-04 12:50:05     End time       : 2025-10-04 07:19:57.79830625 +0000 UTC
+2025-10-04 12:50:05     Status code    : Unset
+2025-10-04 12:50:05     Status message :
+2025-10-04 12:50:05 Attributes:
+2025-10-04 12:50:05      -> messaging.destination.partition.id: Str(0)
+2025-10-04 12:50:05      -> messaging.system: Str(kafka)
+2025-10-04 12:50:05      -> thread.id: Int(52)
+2025-10-04 12:50:05      -> messaging.kafka.consumer.group: Str(message-processor-group)
+2025-10-04 12:50:05      -> messaging.message.body.size: Int(152)
+2025-10-04 12:50:05      -> messaging.kafka.message.offset: Int(19)
+2025-10-04 12:50:05      -> messaging.client_id: Str(consumer-message-processor-group-1)
+2025-10-04 12:50:05      -> thread.name: Str(org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1)
+2025-10-04 12:50:05      -> messaging.destination.name: Str(input-messages)
+2025-10-04 12:50:05      -> messaging.operation: Str(process)
+2025-10-04 12:50:05 Span #8
+2025-10-04 12:50:05     Trace ID       : 8455f6228e160d8838ab89ef6d3631ba
+2025-10-04 12:50:05     Parent ID      :
+2025-10-04 12:50:05     ID             : 2b03f9ed82a56f73
+2025-10-04 12:50:05     Name           : input-messages process
+2025-10-04 12:50:05     Kind           : Consumer
+2025-10-04 12:50:05     Start time     : 2025-10-04 07:19:57.805907 +0000 UTC
+2025-10-04 12:50:05     End time       : 2025-10-04 07:19:57.80682475 +0000 UTC
+2025-10-04 12:50:05     Status code    : Unset
+2025-10-04 12:50:05     Status message :
+2025-10-04 12:50:05 Attributes:
+2025-10-04 12:50:05      -> messaging.destination.partition.id: Str(0)
+2025-10-04 12:50:05      -> messaging.system: Str(kafka)
+2025-10-04 12:50:05      -> thread.id: Int(52)
+2025-10-04 12:50:05      -> messaging.kafka.consumer.group: Str(message-processor-group)
+2025-10-04 12:50:05      -> messaging.message.body.size: Int(152)
+2025-10-04 12:50:05      -> messaging.kafka.message.offset: Int(20)
+2025-10-04 12:50:05      -> messaging.client_id: Str(consumer-message-processor-group-1)
+2025-10-04 12:50:05      -> thread.name: Str(org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1)
+2025-10-04 12:50:05      -> messaging.destination.name: Str(input-messages)
+2025-10-04 12:50:05      -> messaging.operation: Str(process)
+2025-10-04 12:50:05 ScopeSpans #2
+2025-10-04 12:50:05 ScopeSpans SchemaURL:
+2025-10-04 12:50:05 InstrumentationScope io.opentelemetry.kafka-clients-0.11 2.20.0-alpha
+2025-10-04 12:50:05 Span #0
+2025-10-04 12:50:05     Trace ID       : 2f3dd123206516d93a6b20e2d3106b7a
+2025-10-04 12:50:05     Parent ID      : 37019ef216bbd709
+2025-10-04 12:50:05     ID             : 5ce157eae97dfd2e
+2025-10-04 12:50:05     Name           : output-messages publish
+2025-10-04 12:50:05     Kind           : Producer
+2025-10-04 12:50:05     Start time     : 2025-10-04 07:19:57.710566042 +0000 UTC
+2025-10-04 12:50:05     End time       : 2025-10-04 07:19:57.713159292 +0000 UTC
+2025-10-04 12:50:05     Status code    : Unset
+2025-10-04 12:50:05     Status message :
+2025-10-04 12:50:05 Attributes:
+2025-10-04 12:50:05      -> messaging.destination.partition.id: Str(0)
+2025-10-04 12:50:05      -> messaging.system: Str(kafka)
+2025-10-04 12:50:05      -> thread.id: Int(52)
+2025-10-04 12:50:05      -> messaging.kafka.message.offset: Int(12)
+2025-10-04 12:50:05      -> messaging.client_id: Str(message-processor-producer-1)
+2025-10-04 12:50:05      -> thread.name: Str(org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1)
+2025-10-04 12:50:05      -> messaging.destination.name: Str(output-messages)
+2025-10-04 12:50:05      -> messaging.operation: Str(publish)
+2025-10-04 12:50:05 Span #1
+2025-10-04 12:50:05     Trace ID       : d9ff1048b09f2c191f0fda44c530c4c4
+2025-10-04 12:50:05     Parent ID      : 2835563f920803e6
+2025-10-04 12:50:05     ID             : 9f6f098307cbfc9c
+2025-10-04 12:50:05     Name           : output-messages publish
+2025-10-04 12:50:05     Kind           : Producer
+2025-10-04 12:50:05     Start time     : 2025-10-04 07:19:57.728126958 +0000 UTC
+2025-10-04 12:50:05     End time       : 2025-10-04 07:19:57.730624375 +0000 UTC
+2025-10-04 12:50:05     Status code    : Unset
+2025-10-04 12:50:05     Status message :
+2025-10-04 12:50:05 Attributes:
+2025-10-04 12:50:05      -> messaging.destination.partition.id: Str(0)
+2025-10-04 12:50:05      -> messaging.system: Str(kafka)
+2025-10-04 12:50:05      -> thread.id: Int(52)
+2025-10-04 12:50:05      -> messaging.kafka.message.offset: Int(13)
+2025-10-04 12:50:05      -> messaging.client_id: Str(message-processor-producer-1)
+2025-10-04 12:50:05      -> thread.name: Str(org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1)
+2025-10-04 12:50:05      -> messaging.destination.name: Str(output-messages)
+2025-10-04 12:50:05      -> messaging.operation: Str(publish)
+2025-10-04 12:50:05 Span #2
+2025-10-04 12:50:05     Trace ID       : 59371255f1019988ebb83383eaac3125
+2025-10-04 12:50:05     Parent ID      : b6d5df2b3ca44e96
+2025-10-04 12:50:05     ID             : 9ecdc6c716942c79
+2025-10-04 12:50:05     Name           : output-messages publish
+2025-10-04 12:50:05     Kind           : Producer
+2025-10-04 12:50:05     Start time     : 2025-10-04 07:19:57.739551459 +0000 UTC
+2025-10-04 12:50:05     End time       : 2025-10-04 07:19:57.741222584 +0000 UTC
+2025-10-04 12:50:05     Status code    : Unset
+2025-10-04 12:50:05     Status message :
+2025-10-04 12:50:05 Attributes:
+2025-10-04 12:50:05      -> messaging.destination.partition.id: Str(0)
+2025-10-04 12:50:05      -> messaging.system: Str(kafka)
+2025-10-04 12:50:05      -> thread.id: Int(52)
+2025-10-04 12:50:05      -> messaging.kafka.message.offset: Int(14)
+2025-10-04 12:50:05      -> messaging.client_id: Str(message-processor-producer-1)
+2025-10-04 12:50:05      -> thread.name: Str(org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1)
+2025-10-04 12:50:05      -> messaging.destination.name: Str(output-messages)
+2025-10-04 12:50:05      -> messaging.operation: Str(publish)
+2025-10-04 12:50:05 Span #3
+2025-10-04 12:50:05     Trace ID       : 3445c87b55ab0f2d458fd11e6779f4d2
+2025-10-04 12:50:05     Parent ID      : d7dd38f986bc7c11
+2025-10-04 12:50:05     ID             : a62e26f140445bf2
+2025-10-04 12:50:05     Name           : output-messages publish
+2025-10-04 12:50:05     Kind           : Producer
+2025-10-04 12:50:05     Start time     : 2025-10-04 07:19:57.761808584 +0000 UTC
+2025-10-04 12:50:05     End time       : 2025-10-04 07:19:57.763610875 +0000 UTC
+2025-10-04 12:50:05     Status code    : Unset
+2025-10-04 12:50:05     Status message :
+2025-10-04 12:50:05 Attributes:
+2025-10-04 12:50:05      -> messaging.destination.partition.id: Str(0)
+2025-10-04 12:50:05      -> messaging.system: Str(kafka)
+2025-10-04 12:50:05      -> thread.id: Int(52)
+2025-10-04 12:50:05      -> messaging.kafka.message.offset: Int(15)
+2025-10-04 12:50:05      -> messaging.client_id: Str(message-processor-producer-1)
+2025-10-04 12:50:05      -> thread.name: Str(org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1)
+2025-10-04 12:50:05      -> messaging.destination.name: Str(output-messages)
+2025-10-04 12:50:05      -> messaging.operation: Str(publish)
+2025-10-04 12:50:05 Span #4
+2025-10-04 12:50:05     Trace ID       : a2c3d908cb7b88b01466417f6137daba
+2025-10-04 12:50:05     Parent ID      : 8e0227b53a369007
+2025-10-04 12:50:05     ID             : db140d5fac041a63
+2025-10-04 12:50:05     Name           : output-messages publish
+2025-10-04 12:50:05     Kind           : Producer
+2025-10-04 12:50:05     Start time     : 2025-10-04 07:19:57.771056542 +0000 UTC
+2025-10-04 12:50:05     End time       : 2025-10-04 07:19:57.773145708 +0000 UTC
+2025-10-04 12:50:05     Status code    : Unset
+2025-10-04 12:50:05     Status message :
+2025-10-04 12:50:05 Attributes:
+2025-10-04 12:50:05      -> messaging.destination.partition.id: Str(0)
+2025-10-04 12:50:05      -> messaging.system: Str(kafka)
+2025-10-04 12:50:05      -> thread.id: Int(52)
+2025-10-04 12:50:05      -> messaging.kafka.message.offset: Int(16)
+2025-10-04 12:50:05      -> messaging.client_id: Str(message-processor-producer-1)
+2025-10-04 12:50:05      -> thread.name: Str(org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1)
+2025-10-04 12:50:05      -> messaging.destination.name: Str(output-messages)
+2025-10-04 12:50:05      -> messaging.operation: Str(publish)
+2025-10-04 12:50:05 Span #5
+2025-10-04 12:50:05     Trace ID       : 1f9ce9cac57afd519a680d75bc0dd4ae
+2025-10-04 12:50:05     Parent ID      : a5e8a4e89936e487
+2025-10-04 12:50:05     ID             : 7afdc98ec1c55b54
+2025-10-04 12:50:05     Name           : output-messages publish
+2025-10-04 12:50:05     Kind           : Producer
+2025-10-04 12:50:05     Start time     : 2025-10-04 07:19:57.780553125 +0000 UTC
+2025-10-04 12:50:05     End time       : 2025-10-04 07:19:57.782605333 +0000 UTC
+2025-10-04 12:50:05     Status code    : Unset
+2025-10-04 12:50:05     Status message :
+2025-10-04 12:50:05 Attributes:
+2025-10-04 12:50:05      -> messaging.destination.partition.id: Str(0)
+2025-10-04 12:50:05      -> messaging.system: Str(kafka)
+2025-10-04 12:50:05      -> thread.id: Int(52)
+2025-10-04 12:50:05      -> messaging.kafka.message.offset: Int(17)
+2025-10-04 12:50:05      -> messaging.client_id: Str(message-processor-producer-1)
+2025-10-04 12:50:05      -> thread.name: Str(org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1)
+2025-10-04 12:50:05      -> messaging.destination.name: Str(output-messages)
+2025-10-04 12:50:05      -> messaging.operation: Str(publish)
+2025-10-04 12:50:05 Span #6
+2025-10-04 12:50:05     Trace ID       : 75b989f4476205d30e1e6fbad1480b89
+2025-10-04 12:50:05     Parent ID      : fd7e1c78e470ed23
+2025-10-04 12:50:05     ID             : fe8076f9e6e05ffd
+2025-10-04 12:50:05     Name           : output-messages publish
+2025-10-04 12:50:05     Kind           : Producer
+2025-10-04 12:50:05     Start time     : 2025-10-04 07:19:57.78876375 +0000 UTC
+2025-10-04 12:50:05     End time       : 2025-10-04 07:19:57.790895583 +0000 UTC
+2025-10-04 12:50:05     Status code    : Unset
+2025-10-04 12:50:05     Status message :
+2025-10-04 12:50:05 Attributes:
+2025-10-04 12:50:05      -> messaging.destination.partition.id: Str(0)
+2025-10-04 12:50:05      -> messaging.system: Str(kafka)
+2025-10-04 12:50:05      -> thread.id: Int(52)
+2025-10-04 12:50:05      -> messaging.kafka.message.offset: Int(18)
+2025-10-04 12:50:05      -> messaging.client_id: Str(message-processor-producer-1)
+2025-10-04 12:50:05      -> thread.name: Str(org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1)
+2025-10-04 12:50:05      -> messaging.destination.name: Str(output-messages)
+2025-10-04 12:50:05      -> messaging.operation: Str(publish)
+2025-10-04 12:50:05 Span #7
+2025-10-04 12:50:05     Trace ID       : d8cd5b98c14b484fae8b3794f594d4b8
+2025-10-04 12:50:05     Parent ID      : 6d91e543bbf80552
+2025-10-04 12:50:05     ID             : 6a53bc1253c71856
+2025-10-04 12:50:05     Name           : output-messages publish
+2025-10-04 12:50:05     Kind           : Producer
+2025-10-04 12:50:05     Start time     : 2025-10-04 07:19:57.798174458 +0000 UTC
+2025-10-04 12:50:05     End time       : 2025-10-04 07:19:57.799635041 +0000 UTC
+2025-10-04 12:50:05     Status code    : Unset
+2025-10-04 12:50:05     Status message :
+2025-10-04 12:50:05 Attributes:
+2025-10-04 12:50:05      -> messaging.destination.partition.id: Str(0)
+2025-10-04 12:50:05      -> messaging.system: Str(kafka)
+2025-10-04 12:50:05      -> thread.id: Int(52)
+2025-10-04 12:50:05      -> messaging.kafka.message.offset: Int(19)
+2025-10-04 12:50:05      -> messaging.client_id: Str(message-processor-producer-1)
+2025-10-04 12:50:05      -> thread.name: Str(org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1)
+2025-10-04 12:50:05      -> messaging.destination.name: Str(output-messages)
+2025-10-04 12:50:05      -> messaging.operation: Str(publish)
+2025-10-04 12:50:05 Span #8
+2025-10-04 12:50:05     Trace ID       : 8455f6228e160d8838ab89ef6d3631ba
+2025-10-04 12:50:05     Parent ID      : eea16883093a8137
+2025-10-04 12:50:05     ID             : e3caa54a88374869
+2025-10-04 12:50:05     Name           : output-messages publish
+2025-10-04 12:50:05     Kind           : Producer
+2025-10-04 12:50:05     Start time     : 2025-10-04 07:19:57.806705583 +0000 UTC
+2025-10-04 12:50:05     End time       : 2025-10-04 07:19:57.80755775 +0000 UTC
+2025-10-04 12:50:05     Status code    : Unset
+2025-10-04 12:50:05     Status message :
+2025-10-04 12:50:05 Attributes:
+2025-10-04 12:50:05      -> messaging.destination.partition.id: Str(0)
+2025-10-04 12:50:05      -> messaging.system: Str(kafka)
+2025-10-04 12:50:05      -> thread.id: Int(52)
+2025-10-04 12:50:05      -> messaging.kafka.message.offset: Int(20)
+2025-10-04 12:50:05      -> messaging.client_id: Str(message-processor-producer-1)
+2025-10-04 12:50:05      -> thread.name: Str(org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1)
+2025-10-04 12:50:05      -> messaging.destination.name: Str(output-messages)
+2025-10-04 12:50:05      -> messaging.operation: Str(publish)
+2025-10-04 12:50:05     {"resource": {"service.instance.id": "7086bf8d-bdd4-49c1-8600-1e0adff87d71", "service.name": "otelcol-contrib", "service.version": "0.136.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}

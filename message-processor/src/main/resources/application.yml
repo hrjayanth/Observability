@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: message-processor
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: message-processor-group
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
+app:
+  kafka:
+    input-topic: input-messages
+    output-topic: output-messages
+
+otel:
+  service:
+    name: message-processor       # Service name (appears in Grafana/Tempo)
+  exporter:
+    otlp:
+      endpoint: http://localhost:4317   # OTLP gRPC endpoint of OTel Collector
+      protocol: grpc
+  traces:
+    exporter: otlp                      # Enable OTLP trace exporter
+    sampler: always_on                  # (default) always sample traces
+  metrics:
+    exporter: none
+  logs:
+    exporter: none
