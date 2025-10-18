@@ -1,6 +1,5 @@
 package com.learn.jay.java_simple;
 
-
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.clients.producer.ProducerRecord;
@@ -11,7 +10,8 @@ import java.util.Properties;
 public class DataInserter {
 
     public static void main(String[] args) {
-        String orderId = "1001";  // Take ID dynamically from arguments
+        String orderId = "1011";  // Take ID dynamically from arguments
+        int count = 100; // Number of messages to send
         String bootstrapServers = "localhost:9092";
         String topicName = "input-messages";
 
@@ -21,7 +21,9 @@ public class DataInserter {
         props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
         props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
 
-        for(int i = 1001; i < 1011; i++) {
+        int startId = Integer.parseInt(orderId);
+
+        for(int i = startId; i < startId + count; i++) {
             orderId = i + "";
 
             try {

@@ -27,7 +27,9 @@ public class ConsumerService {
         System.out.printf("Consumed -> %s%n", inputMessage);
 
         String messageID = extractMessageID(inputMessage, ID_PATH);
+        Span.current().setAttribute("Application", "Message-Processor");
         Span.current().setAttribute("Message-ID", messageID);
+
 
         // Processing logic
         String processedMessage = "Processed: " + inputMessage;
