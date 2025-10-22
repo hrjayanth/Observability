@@ -15,3 +15,5 @@ gradle-app.setting
 .gradletasknamecache
 
 .DS_Store
+.idea/
+logs/

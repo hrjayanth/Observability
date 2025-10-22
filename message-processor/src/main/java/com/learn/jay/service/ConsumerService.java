@@ -9,7 +9,9 @@ import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Service;
 
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 @Service
 public class ConsumerService {
 
@@ -24,26 +26,22 @@ public class ConsumerService {
     @WithSpan(value = "ConsumerService.consume.1", kind = SpanKind.CONSUMER)
     public void consume(ConsumerRecord<String, String> record) {
         String inputMessage = record.value();
-        System.out.printf("Consumed -> %s%n", inputMessage);
 
+        log.info("Consumed -> {}", inputMessage);
         String messageID = extractMessageID(inputMessage, ID_PATH);
+
+        log.info("Extracted Message ID: {}", messageID);
         Span.current().setAttribute("Application", "Message-Processor");
         Span.current().setAttribute("Message-ID", messageID);
 
-
-        // Processing logic
-        String processedMessage = "Processed: " + inputMessage;
-
         // Forward to Producer
-        producerService.sendMessage(processedMessage);
+        producerService.sendMessage(inputMessage);
     }
 
     public String extractMessageID(String inputMessage, String tagPath) {
         XmlMapper xmlMapper = new XmlMapper();
-
         try {
             JsonNode rootNode = xmlMapper.readTree(inputMessage);
-
             String[] pathParts = tagPath.split("/");
             JsonNode current = rootNode;
 
@@ -53,13 +51,10 @@ public class ConsumerService {
                 }
                 current = current.path(part);
             }
-
             return current.isMissingNode() ? null : current.asText();
         } catch (Exception e) {
-            e.printStackTrace();
+            log.error("Error Processing XML Message: {}", e.getMessage());
             return null;
         }
-
-//        return messageID;
     }
 }

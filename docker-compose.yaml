@@ -75,7 +75,9 @@ services:
       - "24224:24224"
     volumes:
       - ./resources/fluent-bit.conf:/fluent-bit/etc/fluent-bit.conf:ro
-#      - ./resources/parsers.conf:/fluent-bit/etc/parsers.conf:ro
+      - ./resources/parsers.conf:/fluent-bit/etc/parsers.conf
+      - ./message-processor/logs:/logs/message-processor-1:ro
+      - ./message-processor-2/logs:/logs/message-processor-2:ro
     networks:
       - telemetry
     restart: always

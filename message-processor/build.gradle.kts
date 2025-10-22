@@ -15,13 +15,39 @@ dependencies {
     testImplementation("org.springframework.kafka:spring-kafka-test")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 
+    // https://mvnrepository.com/artifact/org.projectlombok/lombok
+    implementation("org.projectlombok:lombok:1.18.42")
+    annotationProcessor("org.projectlombok:lombok:1.18.42")
+
+    // https://mvnrepository.com/artifact/com.github.loki4j/loki-logback-appender
+    implementation("com.github.loki4j:loki-logback-appender:2.0.1")
+
+    // OpenTelemetry dependencies
     implementation("io.opentelemetry:opentelemetry-api:1.54.1")
     implementation("io.opentelemetry:opentelemetry-sdk:1.54.1")
     implementation("io.opentelemetry:opentelemetry-exporter-otlp:1.54.1")
     implementation("io.opentelemetry.instrumentation:opentelemetry-instrumentation-annotations:2.20.1")
+
     implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.19.2")
 }
 
 tasks.test {
     useJUnitPlatform()
+}
+
+
+tasks.bootRun {
+    jvmArgs = listOf(
+        "-javaagent:${projectDir}/../resources/opentelemetry-javaagent.jar"
+    )
+
+    environment("OTEL_EXPORTER_OTLP_ENDPOINT", "http://localhost:4317")
+    environment("OTEL_EXPORTER_OTLP_PROTOCOL", "grpc")
+    environment("OTEL_LOGS_EXPORTER", "none")
+    environment("OTEL_METRICS_EXPORTER", "none")
+    environment("OTEL_RESOURCE_ATTRIBUTES", "deployment.environment=dev")
+    environment("OTEL_SERVICE_NAME", "my-application-1")
+    environment("OTEL_TRACES_EXPORTER", "otlp")
+    environment("OTEL_TRACES_SAMPLER", "always_on")
+    environment("service.version", "1.0.0")
 }

@@ -4,12 +4,14 @@ import com.fasterxml.jackson.databind.JsonNode;
 import io.opentelemetry.api.trace.Span;
 import io.opentelemetry.api.trace.SpanKind;
 import io.opentelemetry.instrumentation.annotations.WithSpan;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Service;
 
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 
+@Slf4j
 @Service
 public class ConsumerService {
 
@@ -24,7 +26,7 @@ public class ConsumerService {
     @WithSpan(value = "ConsumerService.consume.1", kind = SpanKind.CONSUMER)
     public void consume(ConsumerRecord<String, String> record) {
         String inputMessage = record.value();
-        System.out.printf("Consumed -> %s%n", inputMessage);
+        log.info("Consumed -> {}", inputMessage);
 
         Span.current().setAttribute("Application", "Message-Processor1");
 
@@ -53,10 +55,8 @@ public class ConsumerService {
 
             return current.isMissingNode() ? null : current.asText();
         } catch (Exception e) {
-            e.printStackTrace();
+            log.error("Error Processing XML Message: {}", e.getMessage());
             return null;
         }
-
-//        return messageID;
     }
 }
