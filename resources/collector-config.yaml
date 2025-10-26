@@ -6,6 +6,15 @@ receivers:
       http:
         endpoint: "0.0.0.0:4318"
 
+# Use connectors section instead of a spanmetrics processor
+connectors:
+  spanmetrics:
+    # connector config (example fields; adjust buckets/dimensions as needed)
+    histogram:
+      explicit:
+        buckets: [0.005, 0.01, 0.025, 0.05, 0.1, 0.25, 0.5, 1, 2, 5]
+    # you can configure other connector options here (check your collector version docs)
+
 processors:
   memory_limiter:
     limit_mib: 1024
@@ -13,26 +22,48 @@ processors:
     check_interval: 5s
   batch:
     timeout: 10s
+  attributes:
+    actions:
+      - key: process_command_args
+        action: delete
+  filter:
+    metrics:
+      exclude:
+        match_type: regexp
+        metric_names:
+          - ".*process_command_args.*"
 
 exporters:
   debug:
     verbosity: detailed
-
   otlp/tempo:
     endpoint: "tempo:4317"
     tls:
       insecure: true
+  prometheus:
+    endpoint: "0.0.0.0:8889"
+    namespace: "otel_span"
+    send_timestamps: true
 
 service:
   extensions: [health_check]
   telemetry:
     logs:
       level: info
+
   pipelines:
     traces:
       receivers: [otlp]
       processors: [memory_limiter, batch]
-      exporters: [debug, otlp/tempo]
+      # **export to the spanmetrics connector and to tempo/debug**
+      # A connector is referenced in the exporters list of the traces pipeline
+      exporters: [spanmetrics, otlp/tempo, debug]
+
+    metrics:
+      # the metrics pipeline will receive from the connector and export to prometheus
+      receivers: [spanmetrics]           # optional: if you want collector's prom endpoint to be a 'receiver' name
+      processors: [attributes, filter, batch]
+      exporters: [prometheus]
 
 extensions:
   health_check: {}

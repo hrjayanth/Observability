@@ -44,7 +44,8 @@
                 "thread": "%thread",
                 "trace_id": "%X{trace_id}",
                 "span_id": "%X{span_id}",
-                "message": "%msg"
+                "message": "%msg",
+                "service_name": "message-processor-2"
                 }%n
             </pattern>
         </encoder>

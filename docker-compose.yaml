@@ -27,7 +27,7 @@ services:
     restart: always
 
   prometheus:
-    image: prom/prometheus:v3.1.0
+    image: prom/prometheus:latest
     container_name: prometheus-201
     volumes:
       - ./resources/prometheus.yml:/etc/prometheus/prometheus.yml
@@ -45,7 +45,10 @@ services:
   mimir:
     image: grafana/mimir:latest
     container_name: mimir-201
-    command: [ "-config.file=/etc/mimir/config.yaml" ]
+    command: >
+      -config.file=/etc/mimir/config.yaml
+      -target=all
+      -validation.max-length-label-value=8192
     volumes:
       - ./resources/mimir-config.yaml:/etc/mimir/config.yaml
       - mimir_data:/data
@@ -83,7 +86,7 @@ services:
     restart: always
 
   grafana:
-    image: grafana/grafana:12.2
+    image: grafana/grafana:latest
     container_name: grafana-201
     ports:
       - "3000:3000"
