@@ -11,20 +11,12 @@
     <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
             <pattern>
-                {
-                "timestamp": "%date{ISO8601}",
-                "level": "%level",
-                "logger": "%logger",
-                "thread": "%thread",
-                "trace_id": "%X{trace_id}",
-                "span_id": "%X{span_id}",
-                "message": "%msg"
-                }%n
+                %d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} trace_id=%X{trace_id} span_id=%X{span_id} - %msg%n
             </pattern>
         </encoder>
     </appender>
 
-    <!-- Rolling File Appender -->
+    <!-- JSON Rolling File Appender (Loki-friendly) -->
     <appender name="ROLLING_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>${LOG_FILE}</file>
 
@@ -35,19 +27,45 @@
             <totalSizeCap>100MB</totalSizeCap>
         </rollingPolicy>
 
-        <encoder>
-            <pattern>
-                {
-                "timestamp": "%date{ISO8601}",
-                "level": "%level",
-                "logger": "%logger",
-                "thread": "%thread",
-                "trace_id": "%X{trace_id}",
-                "span_id": "%X{span_id}",
-                "message": "%msg",
-                "service_name": "message-processor-1"
-                }%n
-            </pattern>
+        <!-- JSON encoder for clean Loki parsing -->
+        <encoder class="net.logstash.logback.encoder.LoggingEventCompositeJsonEncoder">
+            <providers>
+
+                <!-- Timestamp -->
+                <timestamp>
+                    <timeZone>UTC</timeZone>
+                </timestamp>
+
+                <!-- Log level -->
+                <pattern>
+                    <pattern>{"level": "%level"}</pattern>
+                </pattern>
+
+                <!-- Logger name -->
+                <loggerName>
+                    <fieldName>logger</fieldName>
+                </loggerName>
+
+                <!-- Thread name -->
+                <threadName>
+                    <fieldName>thread</fieldName>
+                </threadName>
+
+                <!-- Trace and Span IDs from OpenTelemetry -->
+                <mdc>
+                    <includeMdcKeyName>trace_id</includeMdcKeyName>
+                    <includeMdcKeyName>span_id</includeMdcKeyName>
+                </mdc>
+
+                <!-- Service name -->
+                <pattern>
+                    <pattern>{"service_name": "my-application-1"}</pattern>
+                </pattern>
+
+                <!-- Actual log message -->
+                <message />
+
+            </providers>
         </encoder>
     </appender>
 

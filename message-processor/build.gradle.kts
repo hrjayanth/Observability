@@ -19,6 +19,9 @@ dependencies {
     implementation("org.projectlombok:lombok:1.18.42")
     annotationProcessor("org.projectlombok:lombok:1.18.42")
 
+    // https://mvnrepository.com/artifact/net.logstash.logback/logstash-logback-encoder
+    implementation("net.logstash.logback:logstash-logback-encoder:9.0")
+
     // https://mvnrepository.com/artifact/com.github.loki4j/loki-logback-appender
     implementation("com.github.loki4j:loki-logback-appender:2.0.1")
 

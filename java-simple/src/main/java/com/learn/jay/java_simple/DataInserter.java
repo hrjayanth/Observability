@@ -10,7 +10,7 @@ import java.util.Properties;
 public class DataInserter {
 
     public static void main(String[] args) {
-        String orderId = "1011";  // Take ID dynamically from arguments
+        String orderId = "10300";  // Take ID dynamically from arguments
         int count = 100; // Number of messages to send
         String bootstrapServers = "localhost:9092";
         String topicName = "input-messages";
